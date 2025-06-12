@@ -1,0 +1,13 @@
+<nav style="background-color: #f8f8f8; padding: 10px; border-bottom: 1px solid #ccc;">
+  <a href="/" style="margin-right: 10px;">홈</a>
+  <a href="/list" style="margin-right: 10px;">글 목록</a>
+  <a href="/enter" style="margin-right: 10px;">글 작성</a>
+
+  <% if (typeof user !== 'undefined' && user) { %>
+    <span style="margin-left: 20px;">환영합니다, <%= user.userid %>님</span>
+    <a href="/logout" style="margin-left: 10px;">로그아웃</a>
+  <% } else { %>
+    <a href="/login" style="margin-left: 20px;">로그인</a>
+    <a href="/signup" style="margin-left: 10px;">회원가입</a>
+  <% } %>
+</nav>
