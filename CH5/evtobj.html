@@ -1,0 +1,19 @@
+<html>
+    <head>이벤트 객체</head>
+    <body>
+        <input type = 'button' id = 'btnclk' value = '버튼'>
+        <script>
+            function msg(event){
+                alert(event.type);
+                alert("x좌표: " + event.clientX);
+                alert("y좌표: " + event.clientY);
+                alert(event);
+            }
+            btnclk.addEventListener('click', msg);
+        </script>
+        <div>
+            사용자가 버튼 클릭과 같은 DOM과 관련된 이벤트를 발생시키면
+            <br>이벤트 관련 정보가 생성되는것
+        </div>
+    </body>
+</html>

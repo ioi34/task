@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type = 'button' id = 'btnclk' value = '버튼'>
+        <script>
+            btnclk.onclick = function(){
+                alert('버튼 클릭')
+            }
+            function first(){
+                alert('마우스 위');
+                alert(this.id);
+            }
+            btnclk.addEventListener('mouseover',first);
+            btnclk.addEventListener('click',function(){
+                alert('두번째 메세지');
+            });
+            btnclk.removeEventListener ('click', first);
+        </script>
+        <div>
+            <h2>이벤트 리스너</h2>
+            1개의 이벤트에 여러 이벤트 핸들러를 등록하기 위해 사용
+        </div>
+    </body>
+</html>
